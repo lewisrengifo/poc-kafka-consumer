@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: poc-kafka-consumer
+  kafka:
+    topics:
+      raw-input-data: bcp-poc-topic
+    bootstrap-servers: localhost:29092
+    consumer:
+      group-id: bcp-poc-group-id
+      max-poll-records: 1
+    listener:
+      poll-timeout: 1000
+server:
+  port: 8080
